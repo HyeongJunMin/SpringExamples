@@ -20,6 +20,8 @@ public class JpaSelect {
         try {
             //SELECT문 수행
             Member findMem = em.find(Member.class, 1L);
+
+            //출력결과 확인
             System.out.println("findMem id = " + findMem.getId());
             System.out.println("findMem name = " + findMem.getName());
 
