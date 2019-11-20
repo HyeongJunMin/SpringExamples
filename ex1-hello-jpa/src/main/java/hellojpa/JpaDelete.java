@@ -4,13 +4,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import java.util.Arrays;
 
-/**Hibernate SELECT TEST
- *
- */
-public class JpaSelect {
-
+public class JpaDelete {
     public static void run() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
         EntityManager em = emf.createEntityManager();
@@ -19,12 +14,11 @@ public class JpaSelect {
         tx.begin();
 
         try {
-            //SELECT문 수행
+            //SELECT문 수행을 통해 조건에 맞는 객체 리턴
             Member findMem = em.find(Member.class, 1L);
 
-            //출력결과 확인
-            System.out.println("findMem id = " + findMem.getId());
-            System.out.println("findMem name = " + findMem.getName());
+            //조건에 맞는 객체 삭제
+            em.remove(findMem);
 
             tx.commit();
         }catch (Exception e){
@@ -34,5 +28,4 @@ public class JpaSelect {
         }
         emf.close();
     }
-
 }

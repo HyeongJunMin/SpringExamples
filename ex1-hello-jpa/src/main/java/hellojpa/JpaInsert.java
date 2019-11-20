@@ -6,26 +6,21 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import java.util.Arrays;
 
-/**Hibernate SELECT TEST
- *
- */
-public class JpaSelect {
-
-    public static void run() {
+public class JpaInsert {
+    public static void run(){
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
         EntityManager em = emf.createEntityManager();
 
+        //트랜잭션은 아주 중요한 역할을 함
         EntityTransaction tx = em.getTransaction();
         tx.begin();
 
         try {
-            //SELECT문 수행
-            Member findMem = em.find(Member.class, 1L);
-
-            //출력결과 확인
-            System.out.println("findMem id = " + findMem.getId());
-            System.out.println("findMem name = " + findMem.getName());
-
+            //엔티티매니저로 값을 넣고뺌
+            Member mem = new Member();
+            mem.setId(2L);
+            mem.setName("HelloB");
+            em.persist(mem);
             tx.commit();
         }catch (Exception e){
             tx.rollback();  //예외 발생 시 트랜잭션 롤
@@ -34,5 +29,4 @@ public class JpaSelect {
         }
         emf.close();
     }
-
 }

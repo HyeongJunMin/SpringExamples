@@ -42,7 +42,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JpaSelect">
+  <component name="RunManager" selected="Application.JpaMain">
+    <configuration name="JpaInsert" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hellojpa.JpaInsert" />
+      <module name="ex1-hello-jpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hellojpa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JpaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hellojpa.JpaMain" />
       <module name="ex1-hello-jpa" />
@@ -71,8 +84,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JpaSelect" />
         <item itemvalue="Application.JpaMain" />
+        <item itemvalue="Application.JpaSelect" />
+        <item itemvalue="Application.JpaInsert" />
       </list>
     </recent_temporary>
   </component>
@@ -86,7 +100,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574144472261</updated>
-      <workItem from="1574144475290" duration="6927000" />
+      <workItem from="1574144475290" duration="8830000" />
     </task>
     <servers />
   </component>
