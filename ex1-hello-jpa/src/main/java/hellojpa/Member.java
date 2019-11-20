@@ -1,40 +1,38 @@
 package hellojpa;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity //JPA로딩될 때 JPA를 사용하는 클래스라고 인식
 @Table(name = "MEMBER") //테이블 이름 지정
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter @Setter
 public class Member {
 
-    @Id //pk임을 알려줌
+    @Id
     private Long id;
-    @Column(name = "NAME")  //컬럼이름 지정
-    private String name;
 
-    public Long getId() {
-        return id;
-    }
+    @Column(name = "name")
+    private String username;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    private int age;
 
-    public String getName() {
-        return name;
-    }
+    @Enumerated(EnumType.STRING)//enum타입 ORDINAL : 숫자로 표현된 순서, STRING : 문자그대로의 이름
+    private RoleType roleType;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    @Temporal(TemporalType.TIMESTAMP)//Date, Time, Timestamp 세 가지 사용 가능한 enum클래스
+    private Date createdDate;
 
-    @Override
-    public String toString() {
-        return "Member{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastModifiedDate;
+
+    @Lob    //대용량 컨텐츠
+    private String description;
+
 }

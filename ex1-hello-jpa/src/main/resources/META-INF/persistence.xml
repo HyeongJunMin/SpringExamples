@@ -20,6 +20,8 @@
             <property name="hibernate.show_sql" value="true"/><!--수행된 쿼리를 보기위한 옵션-->
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.use_sql_comments" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+
         </properties>
     </persistence-unit>
 </persistence>

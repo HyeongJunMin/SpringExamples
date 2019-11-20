@@ -18,7 +18,7 @@ public class JpaUpdate {
             Member findMem = em.find(Member.class, 1L);
 
             //객체수정 - 자바컬렉션을 다루는 방법과 유사.
-            findMem.setName("바뀐이름");
+            findMem.setUsername("바뀐이름");
 
             tx.commit();
         }catch (Exception e){

@@ -19,7 +19,7 @@ public class JpaInsert {
             //엔티티매니저로 값을 넣고뺌
             Member mem = new Member();
             mem.setId(2L);
-            mem.setName("HelloB");
+            mem.setUsername("HelloB");
             em.persist(mem);
             tx.commit();
         }catch (Exception e){
