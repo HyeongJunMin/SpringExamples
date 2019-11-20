@@ -17,10 +17,15 @@ public class JpaInsert {
 
         try {
             //엔티티매니저로 값을 넣고뺌
+            Team team = new Team();
+            team.setName("TeamA");
+            em.persist(team);
+
             Member mem = new Member();
-            mem.setId(2L);
-            mem.setUsername("HelloB");
+            mem.setUsername("mem1");
+            mem.setTeamId(team.getId());    //영속상태인 team의 id를 가져옴 - 연관관계 매핑이 아직 안되므로 객체자체를 가져오지 않았음
             em.persist(mem);
+
             tx.commit();
         }catch (Exception e){
             tx.rollback();  //예외 발생 시 트랜잭션 롤
