@@ -5,6 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import java.util.Arrays;
+import java.util.List;
 
 public class JpaInsert {
     public static void run(){
@@ -23,8 +24,23 @@ public class JpaInsert {
 
             Member mem = new Member();
             mem.setUsername("mem1");
-            mem.setTeamId(team.getId());    //영속상태인 team의 id를 가져옴 - 연관관계 매핑이 아직 안되므로 객체자체를 가져오지 않았음
+            //mem.setTeamId(team.getId());    //영속상태인 team의 id를 가져옴 - 연관관계 매핑이 아직 안되므로 객체자체를 가져오지 않았음
+            mem.setTeam(team);  //연관관계 매핑을 통해 객체 자체를 사용
             em.persist(mem);
+
+            em.flush();
+            em.clear();
+
+            System.out.println("flush + clear");
+
+            Member findMem = em.find(Member.class, mem.getId());
+            //Team findTeam = findMem.getTeam();
+            //System.out.println("findTeam = " + findTeam.toString());
+
+            List<Member> members = findMem.getTeam().getMembers();
+            for (Member m : members){
+                System.out.println("mem " + m.getUsername() );
+            }
 
             tx.commit();
         }catch (Exception e){

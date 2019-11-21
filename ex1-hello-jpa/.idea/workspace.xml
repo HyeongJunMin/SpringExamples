@@ -2,17 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f5889f6-3123-4242-b940-138bd546c967" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hellojpa/Team.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/associtationMapping/UndirectionalMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpashop/ClassModelling.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpashop/DBModelling.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/JpaInsert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/JpaInsert.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/Team.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hellojpa/JpaInsert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hellojpa/JpaInsert.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hellojpa/JpaMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hellojpa/JpaMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hellojpa/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hellojpa/Member.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hellojpa/RoleType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hellojpa/RoleType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpashop/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hellojpa/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hellojpa/Team.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/JpaMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpashop/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,10 +55,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/META-INF" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -131,7 +139,7 @@
       <workItem from="1574144475290" duration="11152000" />
       <workItem from="1574213418947" duration="56000" />
       <workItem from="1574213490433" duration="5467000" />
-      <workItem from="1574233234201" duration="3469000" />
+      <workItem from="1574233234201" duration="9721000" />
     </task>
     <servers />
   </component>
