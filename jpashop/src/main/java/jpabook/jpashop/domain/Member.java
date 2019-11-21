@@ -3,9 +3,11 @@ package jpabook.jpashop.domain;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Getter @Setter @ToString
+@Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
 public class Member {
 
@@ -16,4 +18,7 @@ public class Member {
     private String city;
     private String street;
     private String zipcode;
+
+    @OneToMany(mappedBy = "member")
+    private List<Order> orders = new ArrayList<>();
 }

@@ -16,7 +16,6 @@ public class JpaMain {
 
         try {
 
-
             tx.commit();
         }catch (Exception e){
             tx.rollback();  //예외 발생 시 트랜잭션 롤

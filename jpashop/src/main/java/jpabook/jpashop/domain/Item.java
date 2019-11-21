@@ -8,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-@Getter @Setter @ToString
+@Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
 public class Item {
 
