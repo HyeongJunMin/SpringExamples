@@ -7,6 +7,7 @@ public class JpaMain {
         //JpaInsert.run();
         //JpaSelect.run();
         //JpaUpdate.run();
-        UndirectionalMapping.run();
+        //UndirectionalMapping.run();
+        JpaInheritance.run();
     }
 }

@@ -1,10 +1,12 @@
 package hellojpa;
 
+import domain.Member;
+import domain.Team;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import java.util.Arrays;
 import java.util.List;
 
 public class JpaInsert {

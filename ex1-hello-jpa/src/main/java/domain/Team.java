@@ -1,4 +1,4 @@
-package hellojpa;
+package domain;
 
 import lombok.*;
 
@@ -9,7 +9,7 @@ import java.util.List;
 @Entity
 @Getter @Setter @ToString
 @NoArgsConstructor @AllArgsConstructor
-public class Team {
+public class Team extends BaseEntity {
     @Id @GeneratedValue
     @Column(name = "TEAM_ID")
     private Long id;

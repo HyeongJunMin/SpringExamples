@@ -1,18 +1,16 @@
 package hellojpa;
 
 import domain.Member;
+import domain.Movie;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-/**Hibernate SELECT TEST
- *
- */
-public class JpaSelect {
+public class JpaInheritance {
 
-    public static void run() {
+    public static void run(){
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
         EntityManager em = emf.createEntityManager();
 
@@ -20,12 +18,19 @@ public class JpaSelect {
         tx.begin();
 
         try {
-            //SELECT문 수행
-            Member findMem = em.find(Member.class, 1L);
+            Movie movie = new Movie();
+            movie.setDirector("aaaa");
+            movie.setActor("bb");
+            movie.setName("바람과함께사라지다");
+            movie.setPrice(10000);
 
-            //출력결과 확인
-            System.out.println("findMem id = " + findMem.getId());
-            System.out.println("findMem name = " + findMem.getUsername());
+            em.persist(movie);
+
+            em.flush();
+            em.clear();
+
+            Movie findMovie = em.find(Movie.class, movie.getId());
+            System.out.println("findMov : " + findMovie.getName());
 
             tx.commit();
         }catch (Exception e){

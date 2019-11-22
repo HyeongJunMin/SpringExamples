@@ -1,6 +1,6 @@
 package hellojpa;
 
-import lombok.extern.slf4j.Slf4j;
+import domain.Member;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
