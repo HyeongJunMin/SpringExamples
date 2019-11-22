@@ -2,10 +2,9 @@ package jpabook.jpashop.domain;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter @Setter
@@ -19,4 +18,7 @@ public class Item {
     private String name;
     private int price;
     private int stockQuantity;
+
+    @ManyToMany(mappedBy = "items") //예시이기 때문에 다대다를 사용하였으나 실제로는 사용하지 않도록 한다.
+    private List<Category> categories = new ArrayList<>();
 }
