@@ -6,10 +6,15 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Item만 단독으로 사용하지 않고 Album, Book, Movie에서 상속받아 사용한다.
+ */
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "DTYPE")
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
-public class Item {
+public abstract class Item extends BaseEntity{
 
     @Id @GeneratedValue
     @Column(name = "ITEM_ID")

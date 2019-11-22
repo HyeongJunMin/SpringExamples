@@ -1,5 +1,6 @@
 package jpabook.jpashop;
 
+import jpabook.jpashop.domain.Book;
 import jpabook.jpashop.domain.Order;
 
 import javax.persistence.EntityManager;
@@ -17,6 +18,10 @@ public class JpaMain {
         tx.begin();
 
         try {
+            Book b = new Book();
+            b.setIsbn("isbn");
+            b.setAuthor("author");
+            em.persist(b);
 
             Order o = new Order();
             em.persist(o);
