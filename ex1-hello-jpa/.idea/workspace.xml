@@ -2,49 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f5889f6-3123-4242-b940-138bd546c967" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Album.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Locker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/MemberProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Movie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hellojpa/JpaInheritance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/Delivery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/DeliveryStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Child.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Parent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/proxy/JpaProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/Album.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/associtationMapping/UndirectionalMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/associtationMapping/UndirectionalMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/JpaDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/JpaDelete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/JpaInsert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/JpaInsert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/JpaPersistenceContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/JpaPersistenceContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/JpaSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/JpaSelect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/JpaUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/JpaUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/RoleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/RoleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/associtationMapping/UndirectionalMapping.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/associtationMapping/UndirectionalMapping.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Album.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Album.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Locker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Locker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Member.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Movie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/RoleType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/RoleType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Team.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hellojpa/JpaDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hellojpa/JpaDelete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hellojpa/JpaInheritance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hellojpa/JpaInheritance.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hellojpa/JpaInsert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hellojpa/JpaInsert.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hellojpa/JpaMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hellojpa/JpaMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hellojpa/JpaPersistenceContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hellojpa/JpaPersistenceContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hellojpa/JpaSelect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hellojpa/JpaSelect.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hellojpa/JpaUpdate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hellojpa/JpaUpdate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hellojpa/Member.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hellojpa/RoleType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hellojpa/Team.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpashop/ClassModelling.png" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/ClassModelling.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpashop/DBModelling.png" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/DBModelling.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/JpaMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/Delivery.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/Delivery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/src/main/java/jpabook/jpashop/domain/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpashop/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jpashop/target/classes/jpabook/jpashop/JpaMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/target/classes/jpabook/jpashop/JpaMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpashop/target/classes/jpabook/jpashop/domain/Delivery.class" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/target/classes/jpabook/jpashop/domain/Delivery.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jpashop/target/classes/jpabook/jpashop/domain/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/target/classes/jpabook/jpashop/domain/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpashop/target/classes/jpabook/jpashop/domain/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/target/classes/jpabook/jpashop/domain/Member.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jpashop/target/classes/jpabook/jpashop/domain/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/target/classes/jpabook/jpashop/domain/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jpashop/target/classes/jpabook/jpashop/domain/OrderItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/../jpashop/target/classes/jpabook/jpashop/domain/OrderItem.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +159,7 @@
       <workItem from="1574144475290" duration="11152000" />
       <workItem from="1574213418947" duration="56000" />
       <workItem from="1574213490433" duration="5467000" />
-      <workItem from="1574233234201" duration="14690000" />
+      <workItem from="1574233234201" duration="20015000" />
     </task>
     <servers />
   </component>

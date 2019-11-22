@@ -11,7 +11,7 @@ import javax.persistence.*;
  */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn    //DTYPE컬럼을 생성해서 하위 엔티티 이름을 저장한다
+@DiscriminatorColumn(name = "DTYPE")    //DTYPE컬럼을 생성해서 하위 엔티티 이름을 저장한다
 @Getter @Setter
 public abstract class Item {
 

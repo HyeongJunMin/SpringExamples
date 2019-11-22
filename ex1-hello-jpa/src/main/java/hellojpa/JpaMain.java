@@ -1,6 +1,7 @@
 package hellojpa;
 
 import associtationMapping.UndirectionalMapping;
+import proxy.JpaProxy;
 
 public class JpaMain {
     public static void main(String[] args) {
@@ -8,6 +9,7 @@ public class JpaMain {
         //JpaSelect.run();
         //JpaUpdate.run();
         //UndirectionalMapping.run();
-        JpaInheritance.run();
+        //JpaInheritance.run();
+        JpaProxy.run();
     }
 }
