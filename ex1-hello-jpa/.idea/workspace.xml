@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f5889f6-3123-4242-b940-138bd546c967" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/valueType/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/valueType/AddressEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/valueType/MemberCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jpql/CriteriaExams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jpql/JpqlExams.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Member.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Team.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/proxy/JpaProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/proxy/JpaProxy.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -130,6 +126,7 @@
       <workItem from="1574213490433" duration="5467000" />
       <workItem from="1574233234201" duration="20474000" />
       <workItem from="1574577350078" duration="2456000" />
+      <workItem from="1574636784382" duration="1781000" />
     </task>
     <servers />
   </component>
