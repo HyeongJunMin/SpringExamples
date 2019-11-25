@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f5889f6-3123-4242-b940-138bd546c967" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpql/CriteriaExams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpql/JpqlExams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2-jpql-jpa/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2-jpql-jpa/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2-jpql-jpa/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2-jpql-jpa/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2-jpql-jpa/Modelling.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2-jpql-jpa/ex2-jpql-jpa.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2-jpql-jpa/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2-jpql-jpa/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2-jpql-jpa/src/main/java/jpql/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2-jpql-jpa/src/main/java/jpql/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2-jpql-jpa/src/main/java/jpql/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2-jpql-jpa/src/main/java/jpql/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2-jpql-jpa/src/main/java/jpql/Team.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2-jpql-jpa/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,6 +49,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/META-INF" />
@@ -126,7 +139,7 @@
       <workItem from="1574213490433" duration="5467000" />
       <workItem from="1574233234201" duration="20474000" />
       <workItem from="1574577350078" duration="2456000" />
-      <workItem from="1574636784382" duration="1781000" />
+      <workItem from="1574636784382" duration="4037000" />
     </task>
     <servers />
   </component>
