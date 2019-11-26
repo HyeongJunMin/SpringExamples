@@ -1,10 +1,11 @@
-import jpql.Member;
+import subjects.FetchJoin_Collection;
+import subjects.FetchJoin_Entity;
+import subjects.UsingEntityDirectly;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,12 +16,9 @@ public class Main {
         tx.begin();
 
         try {
-            Member mem = new Member();
-            mem.setUsername("minhj");
-            em.persist(mem);
-
-
-            tx.commit();
+            //FetchJoin_Entity.run(em, tx);
+            //FetchJoin_Collection.run(em, tx);
+            UsingEntityDirectly.run(em, tx);
         }catch (Exception e){
             tx.rollback();  //예외 발생 시 트랜잭션 롤
         }finally {
