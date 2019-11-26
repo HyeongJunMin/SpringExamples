@@ -1,6 +1,4 @@
-import subjects.FetchJoin_Collection;
-import subjects.FetchJoin_Entity;
-import subjects.UsingEntityDirectly;
+import subjects.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -18,7 +16,9 @@ public class Main {
         try {
             //FetchJoin_Entity.run(em, tx);
             //FetchJoin_Collection.run(em, tx);
-            UsingEntityDirectly.run(em, tx);
+            //UsingEntityDirectly.run(em, tx);
+            //NamedQuery.run(em, tx);
+            BulkQuery_Update.run(em, tx);
         }catch (Exception e){
             tx.rollback();  //예외 발생 시 트랜잭션 롤
         }finally {

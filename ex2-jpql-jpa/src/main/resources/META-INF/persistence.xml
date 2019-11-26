@@ -5,6 +5,7 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
     <!-- Define persistence unit -->
     <persistence-unit name="hello"><!--보통 데이터베이스 1개당 1개로 설정-->
+        <mapping-file>META-INF/ormMember.xml</mapping-file>
         <properties>
             <!--필수속성-->
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>

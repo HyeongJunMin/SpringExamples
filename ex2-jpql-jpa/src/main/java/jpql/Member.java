@@ -9,6 +9,10 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter @Setter
+@NamedQuery(
+        name = "Member.findByUserName"
+        , query = "select m from Member m where m.username = :username"
+)
 public class Member {
 
     @Id @GeneratedValue
