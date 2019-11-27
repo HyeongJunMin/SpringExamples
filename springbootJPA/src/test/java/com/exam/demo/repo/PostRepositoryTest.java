@@ -31,27 +31,25 @@ public class PostRepositoryTest {
 
         //When
         Post newPost = postRepository.save(post);
-
         //Then
         assertThat(newPost.getId()).isNotNull();    //assertj에 있는 메소드
 
         //When
         List<Post> posts = postRepository.findAll();
+        //Then
         assertThat(posts.size()).isEqualTo(1);
         assertThat(posts).contains(newPost);
 
         //When
         Page<Post> page = postRepository.findAll(PageRequest.of(0, 10));
-
         //Then
-        assertThat(page.getTotalElements()).isEqualTo(1);
-        assertThat(page.getNumber()).isEqualTo(0);
-        assertThat(page.getSize()).isEqualTo(10);
-        assertThat(page.getNumberOfElements()).isEqualTo(1);
+        assertThat(page.getTotalElements()).isEqualTo(1);   //총 개수
+        assertThat(page.getNumber()).isEqualTo(0);  //현재 페이지 번호
+        assertThat(page.getSize()).isEqualTo(10);   //현재 페이지에 보여줄 수 있는 최대 개수
+        assertThat(page.getNumberOfElements()).isEqualTo(1);    //가져온 개수
 
         //When
         postRepository.findByTitleContains("spring", PageRequest.of(0,10));
-
         //Then
         assertThat(page.getTotalElements()).isEqualTo(1);
         assertThat(page.getNumber()).isEqualTo(0);
@@ -60,7 +58,6 @@ public class PostRepositoryTest {
 
         //When
         long spring = postRepository.countByTitleContains("spring");
-
         //Then
         assertThat(spring).isEqualTo(1);
     }
