@@ -1,0 +1,19 @@
+spring:
+  #datasource 빈을 만들 때 쓰이는 정보
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springdata
+    username: hjmin
+    password: hjmin
+  #jpa 설정정보 - persistence.xml역할 중 일부
+  jpa:
+    hibernate:
+      #프로젝트 런 할때 DDL 어떻게하실지? create, update, validate ...
+      ddl-auto: create
+      #ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        format_sql: true
+    show-sql: true
