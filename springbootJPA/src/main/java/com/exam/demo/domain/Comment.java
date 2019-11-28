@@ -21,5 +21,4 @@ public class Comment {
     private Post post;
 
     private Integer likeCount = 0;
-    소회의실 오전11시부터 2시간
 }
