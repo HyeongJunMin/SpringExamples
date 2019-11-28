@@ -6,7 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
- * JpaRepository가 갖는 메소드를 사용할 수 있으면서 직접 정의한 메소드도 사용할 수 있다 
+ * JpaRepository가 갖는 메소드를 사용할 수 있으면서 직접 정의한 메소드도 사용할 수 있다
  */
 public interface PostRepository extends JpaRepository<Post, Long> {
 
