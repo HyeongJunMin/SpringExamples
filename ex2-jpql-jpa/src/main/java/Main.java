@@ -4,6 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import java.lang.reflect.Proxy;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,6 +20,7 @@ public class Main {
             //UsingEntityDirectly.run(em, tx);
             //NamedQuery.run(em, tx);
             BulkQuery_Update.run(em, tx);
+
         }catch (Exception e){
             tx.rollback();  //예외 발생 시 트랜잭션 롤
         }finally {
