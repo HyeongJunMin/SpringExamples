@@ -4,6 +4,7 @@ import com.exam.demo.domain.Comment;
 import com.exam.demo.repo.CommentRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
