@@ -3,7 +3,7 @@ package com.exam.demo.repo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-@Repository("studentRepository")
+//@Repository("studentRepository")
 public class StudentRepositoryJpa implements StudentRepository{
 
     @Override
