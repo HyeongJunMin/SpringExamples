@@ -8,13 +8,14 @@ import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
 @MappedSuperclass
-@Getter @Setter
+@Getter
+@Setter
 public abstract class BaseEntity {
-    @Column(name = "INSERT_MEMBER")
-    private String createdBy;
-    private LocalDateTime createdDate;
+  @Column(name = "INSERT_MEMBER")
+  private String createdBy;
+  private LocalDateTime createdDate;
 
-    @Column(name = "MOD_MEMBER")
-    private String lastModifiedBy;
-    private LocalDateTime lastModifiedDate;
+  @Column(name = "MOD_MEMBER")
+  private String lastModifiedBy;
+  private LocalDateTime lastModifiedDate;
 }

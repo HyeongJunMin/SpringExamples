@@ -22,28 +22,27 @@ import java.util.Set;
 @Setter
 public class MemberCollection {
 
-    @Id
-    @GeneratedValue
-    @Column(name = "MEMBER_ID")
-    private Long id;
+  @Id
+  @GeneratedValue
+  @Column(name = "MEMBER_ID")
+  private Long id;
 
-    @Column(name = "USERNAME")
-    private String username;
+  @Column(name = "USERNAME")
+  private String username;
 
-    @Embedded
-    private Address homeAddress;
+  @Embedded
+  private Address homeAddress;
 
-    @ElementCollection      //매핑해주는 어노테이션
-    @CollectionTable(name = "FAVORITE_FOOD"
-            , joinColumns = @JoinColumn(name = "MEMBER_ID"))    //테이블 이름
-    @Column(name = "FOOD_NAME")
-    private Set<String> favoriteFoods = new HashSet<>();
+  @ElementCollection      //매핑해주는 어노테이션
+  @CollectionTable(name = "FAVORITE_FOOD"
+      , joinColumns = @JoinColumn(name = "MEMBER_ID"))    //테이블 이름
+  @Column(name = "FOOD_NAME")
+  private Set<String> favoriteFoods = new HashSet<>();
 
 //    @ElementCollection
 //    @CollectionTable(name = "ADDRESS"
 //            , joinColumns = @JoinColumn(name = "MEMBER_ID"))
 //    private List<Address> addressHistory = new ArrayList<>();
-
 
 
 }

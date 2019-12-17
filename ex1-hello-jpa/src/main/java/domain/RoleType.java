@@ -1,5 +1,5 @@
 package domain;
 
 public enum RoleType {
-    GUEST, USER, ADMIN
+  GUEST, USER, ADMIN
 }

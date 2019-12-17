@@ -16,18 +16,18 @@ import java.util.Optional;
 @NoRepositoryBean
 public interface MyRepository<T, Id extends Serializable> extends Repository<T, Id> {
 
-    //타입 T와 T를 상속받는 하위타입 E까지 허용
-    //런타임 시점에 null체크
-    <E extends T> E save(@NonNull E entity);
+  //타입 T와 T를 상속받는 하위타입 E까지 허용
+  //런타임 시점에 null체크
+  <E extends T> E save(@NonNull E entity);
 
-    List<T> findAll();
+  List<T> findAll();
 
-    long count();
+  long count();
 
-    //엔티티타입 리턴
-    @Nullable
-    <E extends T> E findById(Id id);
+  //엔티티타입 리턴
+  @Nullable
+  <E extends T> E findById(Id id);
 
-    //Optional 인터페이스가 제공하는 메소드를 통해 검사 가능
-    //<E extends T> Optional<E> findById(Id id);
+  //Optional 인터페이스가 제공하는 메소드를 통해 검사 가능
+  //<E extends T> Optional<E> findById(Id id);
 }

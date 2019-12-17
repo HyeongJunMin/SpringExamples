@@ -7,6 +7,7 @@ import javax.persistence.Id;
 @Entity
 public class MemberProduct {
 
-    @Id @GeneratedValue
-    private Long id;
+  @Id
+  @GeneratedValue
+  private Long id;
 }

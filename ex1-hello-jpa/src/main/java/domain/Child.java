@@ -6,16 +6,17 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Getter @Setter
+@Getter
+@Setter
 public class Child {
 
-    @Id
-    @GeneratedValue
-    private Long id;
+  @Id
+  @GeneratedValue
+  private Long id;
 
-    private String name;
+  private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "parent_id")
-    private Parent parent;
+  @ManyToOne
+  @JoinColumn(name = "parent_id")
+  private Parent parent;
 }

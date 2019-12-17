@@ -10,12 +10,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-@Getter @Setter
-@NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Student {
-    @Id
-    @GeneratedValue
-    private long id;
+  @Id
+  @GeneratedValue
+  private long id;
 
-    private String name;
+  private String name;
 }

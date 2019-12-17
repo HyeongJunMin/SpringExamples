@@ -9,13 +9,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-@Getter @Setter
+@Getter
+@Setter
 public class Product {
 
-    @Id @GeneratedValue
-    @Column(name = "PRODUCT_ID")
-    private Long id;
-    private String name;
-    private int price;
-    private int stockAmount;
+  @Id
+  @GeneratedValue
+  @Column(name = "PRODUCT_ID")
+  private Long id;
+  private String name;
+  private int price;
+  private int stockAmount;
 }

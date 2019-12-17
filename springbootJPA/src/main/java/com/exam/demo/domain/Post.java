@@ -11,13 +11,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Getter @Setter
+@Getter
+@Setter
 public class Post {
 
-    @Id @GeneratedValue
-    private Long id;
-    private String title;
+  @Id
+  @GeneratedValue
+  private Long id;
+  private String title;
 
-    @OneToMany(mappedBy = "post")
-    private List<Comment> comments = new ArrayList();
+  @OneToMany(mappedBy = "post")
+  private List<Comment> comments = new ArrayList();
 }

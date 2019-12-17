@@ -4,10 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 //@Repository("studentRepository")
-public class StudentRepositoryJpa implements StudentRepository{
+public class StudentRepositoryJpa implements StudentRepository {
 
-    @Override
-    public String getAmountOfStudent() {
-        return "됐다 연결이 됐다";
-    }
+  @Override
+  public String getAmountOfStudent() {
+    return "됐다 연결이 됐다";
+  }
 }

@@ -8,19 +8,22 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Getter @Setter
-@NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Member {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "MEMBER_ID")
-    private Long id;
-    private String name;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "MEMBER_ID")
+  private Long id;
+  private String name;
 
-    @Embedded
-    private Period period;
+  @Embedded
+  private Period period;
 
-    @Embedded
-    private Address homeAddress;
+  @Embedded
+  private Address homeAddress;
 
 }

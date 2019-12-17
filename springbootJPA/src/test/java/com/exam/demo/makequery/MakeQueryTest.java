@@ -23,48 +23,48 @@ import java.util.List;
 @DataJpaTest
 public class MakeQueryTest {
 
-    @Autowired
-    CommentRepository commentRepository;
+  @Autowired
+  CommentRepository commentRepository;
 
-    @Test
-    @Rollback(false)
-    public void crud(){
+  @Test
+  @Rollback(false)
+  public void crud() {
 
-        //Given
-        this.createComment("spring boot", 0);
-        this.createComment("spring boot!!", 100);
+    //Given
+    this.createComment("spring boot", 0);
+    this.createComment("spring boot!!", 100);
 
-        log.info("============================================================");
-        //When
-        List<Comment> comments = commentRepository.findByCommentContainsIgnoreCase("Spring");
-        //Then
-        Assertions.assertThat(comments.size()).isEqualTo(2);
+    log.info("============================================================");
+    //When
+    List<Comment> comments = commentRepository.findByCommentContainsIgnoreCase("Spring");
+    //Then
+    Assertions.assertThat(comments.size()).isEqualTo(2);
 
-        log.info("============================================================");
-        //When
-        comments = commentRepository.findByCommentContainsIgnoreCaseAndLikeCountGreaterThan("spring", 10);
-        //Then
-        Assertions.assertThat(comments.size()).isEqualTo(1);
+    log.info("============================================================");
+    //When
+    comments = commentRepository.findByCommentContainsIgnoreCaseAndLikeCountGreaterThan("spring", 10);
+    //Then
+    Assertions.assertThat(comments.size()).isEqualTo(1);
 
-        log.info("============================================================");
-        //When
-        comments = commentRepository.findByCommentContainsIgnoreCaseOrderByLikeCountDesc("spring");
-        //Then
-        Assertions.assertThat(comments).first().hasFieldOrPropertyWithValue("likeCount", 100);
+    log.info("============================================================");
+    //When
+    comments = commentRepository.findByCommentContainsIgnoreCaseOrderByLikeCountDesc("spring");
+    //Then
+    Assertions.assertThat(comments).first().hasFieldOrPropertyWithValue("likeCount", 100);
 
-        log.info("============================================================");
-        //When
-        PageRequest pageRequest = PageRequest.of(0, 10, Sort.by(Sort.Direction.DESC, "likeCount"));
-        Page<Comment> commentPage = commentRepository.findByCommentContainsIgnoreCase("spring", pageRequest);
-        Assertions.assertThat(commentPage.getNumberOfElements()).isEqualTo(2);
-        Assertions.assertThat(commentPage).first().hasFieldOrPropertyWithValue("likeCount", 100);
-    }
+    log.info("============================================================");
+    //When
+    PageRequest pageRequest = PageRequest.of(0, 10, Sort.by(Sort.Direction.DESC, "likeCount"));
+    Page<Comment> commentPage = commentRepository.findByCommentContainsIgnoreCase("spring", pageRequest);
+    Assertions.assertThat(commentPage.getNumberOfElements()).isEqualTo(2);
+    Assertions.assertThat(commentPage).first().hasFieldOrPropertyWithValue("likeCount", 100);
+  }
 
-    private void createComment(String content, int likeCount){
-        Comment comment = new Comment();
-        comment.setComment(content);
-        comment.setLikeCount(likeCount);
-        commentRepository.save(comment);
-    }
+  private void createComment(String content, int likeCount) {
+    Comment comment = new Comment();
+    comment.setComment(content);
+    comment.setLikeCount(likeCount);
+    commentRepository.save(comment);
+  }
 
 }

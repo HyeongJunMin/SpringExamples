@@ -16,21 +16,21 @@ import javax.persistence.PersistenceContext;
 @Transactional
 public class JpaRunner implements ApplicationRunner {
 
-    @PersistenceContext
-    private EntityManager entityManager;
+  @PersistenceContext
+  private EntityManager entityManager;
 
-    @Override
-    public void run(ApplicationArguments args) throws Exception {
-        Account account = new Account();
-        account.setUsername("user1");
-        account.setPassword("user1");
+  @Override
+  public void run(ApplicationArguments args) throws Exception {
+    Account account = new Account();
+    account.setUsername("user1");
+    account.setPassword("user1");
 
-        log.info("account.getUsername() = " + account.getUsername());
+    log.info("account.getUsername() = " + account.getUsername());
 
-        Session session = entityManager.unwrap(Session.class);
-        session.save(account);
+    Session session = entityManager.unwrap(Session.class);
+    session.save(account);
 //        Account account1 = session.find(Account.class, account);
 //        log.info(account1.getUsername());
 
-    }
+  }
 }
