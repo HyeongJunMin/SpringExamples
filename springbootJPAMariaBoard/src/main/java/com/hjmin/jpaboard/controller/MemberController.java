@@ -1,27 +1,20 @@
 package com.hjmin.jpaboard.controller;
 
-import com.hjmin.jpaboard.repository.MemberRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Slf4j
 @Controller
-@RequestMapping("/member")
 public class MemberController {
 
-  @RequestMapping(value = "/login")
-  public String showLoginPage() {
-    log.info("show login page");
-
-    return "/member/login";
+  @RequestMapping(value = "/member/chk")
+  public void chkConnection() {
+    log.info("chk connection ok");
   }
 
-  @RequestMapping(value = "/signup")
-  public String showSignUpPage() {
-    log.info("show signup page");
-
-    return "/member/signup";
+  @RequestMapping(value = "/member/chk2")
+  public void chkConnection2() {
+    log.info("chk connection ok2");
   }
 }

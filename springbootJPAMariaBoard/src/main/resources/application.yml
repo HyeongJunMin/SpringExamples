@@ -8,19 +8,13 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
+
   #jpa 설정 정보
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
     hibernate:
       ddl-auto: create
-  thymeleaf:
-    prefix: classpath:templates/
-    suffix: .html
-    check-template-location: true
-    mode: HTML5
-    cache: false
-    order: 0
 
 logging:
   level:
