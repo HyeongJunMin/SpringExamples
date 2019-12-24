@@ -26,11 +26,10 @@ public class MemberAccountTest {
   }
 
 
-  @Test
+  //@Test
   public void signupTest() throws Exception {
     Member mem = new Member();
-    mem.setName("min");
-    mem.setPw("1234");
+
     mockMvc.perform(post("/member/signup").param("name","min").param("pw","pw"));
   }
 }
