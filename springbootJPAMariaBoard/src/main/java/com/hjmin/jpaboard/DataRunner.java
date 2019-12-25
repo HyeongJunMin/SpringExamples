@@ -26,6 +26,8 @@ public class DataRunner implements ApplicationRunner {
           .build();
       memberRepository.save(member);
     });
+
+
   }
 
   private Email buildEmail(int i) {

@@ -1,7 +1,11 @@
 = RESTful Notes API Guide
+
 :doctype: book
 :icons: font
 :source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
 
 [[overview]]
 = Overview
@@ -57,19 +61,12 @@ use of HTTP status codes.
 = Member
 
 == Member 조회
-curl :
+
 include::{snippets}/get_member/curl-request.adoc[]
-params :
-include::{snippets}/index/path-parameters.adoc[]
-resp :
-include::{snippets}/http-response.adoc[]
-resp fields :
-include::{snippets}/index/member-r-e-s-t-docs-controller-test/get_member/response-fields.adoc[]
-req :
-include:{snippets}/member-r-e-s-t-docs-controller-test/get_member/http-request.adoc[]
-http ie req :
-include:{snippets}/member-r-e-s-t-docs-controller-test/get_member/httpie-request.adoc[]
-req body :
+include::{snippets}/member-r-e-s-t-docs-controller-test/get_member/path-parameters.adoc[]
+include::{snippets}/member-r-e-s-t-docs-controller-test/get_member/http-response.adoc[]
+include::{snippets}/member-r-e-s-t-docs-controller-test/get_member/response-fields.adoc[]
+include::{snippets}/member-r-e-s-t-docs-controller-test/get_member/http-request.adoc[]
+include::{snippets}/member-r-e-s-t-docs-controller-test/get_member/httpie-request.adoc[]
 include::{snippets}/member-r-e-s-t-docs-controller-test/get_member/request-body.adoc[]
-resp body :
 include::{snippets}/member-r-e-s-t-docs-controller-test/get_member/response-body.adoc[]
