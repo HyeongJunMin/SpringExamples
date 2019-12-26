@@ -1,0 +1,28 @@
+server:
+  port: 18081
+
+spring:
+  #datasource 빈을 만들 때 쓰이는 정보
+  datasource:
+    url: jdbc:mysql://localhost:3306/jpaboard?characterEncoding=UTF-8&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  #jpa 설정 정보
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+      #      ddl-auto: update
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE

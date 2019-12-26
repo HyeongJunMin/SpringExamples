@@ -1,0 +1,22 @@
+= RESTful Notes API Guide
+민형준;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+
+== curl req
+include::{snippets}/create-event/curl-request.adoc[]
+
+== http req
+include::{snippets}/create-event/http-request.adoc[]
+
+== http resp
+include::{snippets}/create-event/http-response.adoc[]
+
+== req body
+include::{snippets}/create-event/request-body.adoc[]
+
+== resp body
+include::{snippets}/create-event/response-body.adoc[]
