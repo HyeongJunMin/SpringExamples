@@ -1,9 +1,12 @@
 package com.exam.restdocs.vo;
 
+import com.exam.restdocs.domain.Market;
 import lombok.*;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -15,8 +18,11 @@ public class MarketReqVO {
   private String name;
   private String location;
 
-  private List<Employee> employeeList = new ArrayList();
-  private List<Item> itemList = new ArrayList();
+  //private List<Employee> employeeList = new ArrayList();
+  private Set<Employee> employeeSet = new LinkedHashSet();
+
+  //private List<Item> itemList = new ArrayList();
+  private Set<Item> itemSet = new LinkedHashSet();
 
   @Getter
   @Setter

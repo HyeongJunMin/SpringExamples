@@ -1,5 +1,6 @@
 package com.exam.restdocs.domain;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -14,6 +15,7 @@ import java.util.Set;
 @Getter
 @Setter
 @ToString
+@Builder
 public class Market {
 
   @Id

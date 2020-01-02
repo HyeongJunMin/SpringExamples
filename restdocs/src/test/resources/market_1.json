@@ -1,35 +1,35 @@
 {
-  "name" : "불꽃시장",
-  "location" : "노르브란트",
-  "employeeList" : [
+  "name": "불꽃시장",
+  "location": "노르브란트",
+  "employeeList": [
     {
-      "name" : "Graha Tia",
-      "age" : 996
+      "name": "Graha Tia",
+      "age": 996
     },
     {
-      "name" : "Estiniang",
-      "age" : 38
+      "name": "Estiniang",
+      "age": 38
     },
     {
-      "name" : "Than'kred",
-      "age" : 25
+      "name": "Than'kred",
+      "age": 25
     }
   ],
-  "itemList" : [
+  "itemList": [
     {
-      "name" : "식빵",
-      "category" : "식품",
-      "quantity" : 50
+      "name": "식빵",
+      "category": "식품",
+      "quantity": 50
     },
     {
-      "name" : "휴지",
-      "category" : "생필품",
-      "quantity" : 80
+      "name": "휴지",
+      "category": "생필품",
+      "quantity": 80
     },
     {
-      "name" : "책상",
-      "category" : "가구",
-      "quantity" : 13
+      "name": "책상",
+      "category": "가구",
+      "quantity": 13
     }
   ]
 }

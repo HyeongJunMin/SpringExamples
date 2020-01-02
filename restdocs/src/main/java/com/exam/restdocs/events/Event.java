@@ -1,6 +1,7 @@
 package com.exam.restdocs.events;
 
 import lombok.*;
+import org.springframework.hateoas.RepresentationModel;
 
 import java.time.LocalDateTime;
 
