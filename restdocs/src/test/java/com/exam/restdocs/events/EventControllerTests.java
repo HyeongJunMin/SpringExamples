@@ -53,6 +53,8 @@ public class EventControllerTests {
           .andExpect(status().isCreated())
           .andExpect(jsonPath("id").exists())//id가 있는지 확인
           .andExpect(jsonPath("_links.self").exists())
+          .andExpect(jsonPath("_links.markets").exists())
+          .andExpect(jsonPath("_links.update-market").exists())
           ;
   }
 }

@@ -35,6 +35,8 @@ public class MarketController {
 
     MarketResource marketResource = new MarketResource(market);
     marketResource.add(linkTo(MarketController.class).withSelfRel());
+    marketResource.add(linkTo(MarketController.class).withRel("markets"));
+    marketResource.add(linkTo(MarketController.class).withRel("update-market"));
 
     return ResponseEntity.created(uri).body(marketResource);
   }
