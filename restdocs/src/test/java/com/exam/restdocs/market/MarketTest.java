@@ -6,6 +6,7 @@ import com.exam.restdocs.domain.Item;
 import com.exam.restdocs.domain.Market;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.FileUtils;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +47,7 @@ public class MarketTest {
   @Autowired
   private ObjectMapper objectMapper;
 
+  @Ignore
   @Test
   public void createMarket() throws Exception{
     String jsonData = FileUtils.readFileToString(new File("src/test/resources/market_1.json"));
@@ -107,8 +109,15 @@ public class MarketTest {
         .andExpect(status().isCreated())
         .andExpect(jsonPath("market.id").exists())//id가 있는지 확인
         .andExpect(jsonPath("_links.self").exists())
+        .andExpect(jsonPath("_links.markets").exists())
+        .andExpect(jsonPath("_links.update-market").exists())
+        //적용한 스니펫 : links,
         .andDo(document("create-market",
-              links(linkWithRel("self").description("link to self"))
+              links(
+                  linkWithRel("self").description("link to self"),
+                  linkWithRel("markets").description("link to show all markets"),
+                  linkWithRel("update-market").description("link to update a market")
+              )
             )
         )
     ;

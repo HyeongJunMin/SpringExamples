@@ -9,7 +9,7 @@ import static org.springframework.restdocs.operation.preprocess.Preprocessors.pr
 
 /**
  * RestDocs 설정 커스터마이징
- * 사용하기위해서는 test 클래스에서 @Import
+ * 이 설정을 사용하기위해서는 test 클래스에서 @Import 추가
  */
 @TestConfiguration
 public class RestDocsConfiguration {
