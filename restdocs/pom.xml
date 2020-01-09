@@ -113,6 +113,9 @@
                             <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
+                            <attributes>
+                                <encoding>utf-8</encoding>
+                            </attributes>
                             <backend>html</backend>
                             <doctype>book</doctype>
                         </configuration>

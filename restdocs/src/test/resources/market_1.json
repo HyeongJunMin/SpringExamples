@@ -1,7 +1,7 @@
 {
-  "name": "불꽃시장",
-  "location": "노르브란트",
-  "employeeList": [
+  "marketName": "FlameMarket",
+  "location": "Norvrant",
+  "employees": [
     {
       "name": "Graha Tia",
       "age": 996
@@ -15,20 +15,20 @@
       "age": 25
     }
   ],
-  "itemList": [
+  "items": [
     {
-      "name": "식빵",
-      "category": "식품",
+      "name": "bread",
+      "category": "grocery",
       "quantity": 50
     },
     {
-      "name": "휴지",
-      "category": "생필품",
+      "name": "tissue",
+      "category": "necessaries",
       "quantity": 80
     },
     {
-      "name": "책상",
-      "category": "가구",
+      "name": "desk",
+      "category": "furniture",
       "quantity": 13
     }
   ]

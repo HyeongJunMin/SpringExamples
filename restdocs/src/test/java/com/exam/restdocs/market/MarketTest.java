@@ -23,12 +23,11 @@ import org.springframework.test.web.servlet.MockMvc;
 import java.io.File;
 import java.util.LinkedHashSet;
 
-import static org.springframework.restdocs.headers.HeaderDocumentation.headerWithName;
-import static org.springframework.restdocs.headers.HeaderDocumentation.requestHeaders;
-import static org.springframework.restdocs.hypermedia.HypermediaDocumentation.linkWithRel;
-import static org.springframework.restdocs.hypermedia.HypermediaDocumentation.links;
+import static org.springframework.restdocs.headers.HeaderDocumentation.*;
+import static org.springframework.restdocs.hypermedia.HypermediaDocumentation.*;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.restdocs.payload.PayloadDocumentation.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.head;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -47,7 +46,7 @@ public class MarketTest {
   @Autowired
   private ObjectMapper objectMapper;
 
-  @Ignore
+//  @Ignore
   @Test
   public void createMarket() throws Exception{
     String jsonData = FileUtils.readFileToString(new File("src/test/resources/market_1.json"));
@@ -57,53 +56,41 @@ public class MarketTest {
                 .accept(MediaType.APPLICATION_JSON)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(jsonData))
+              //.content(objectMapper.writeValueAsString(market))//objectMapper가 json string으로 바꿔줌
         .andDo(print())
-        //.andDo(document("create-event"))
-        .andDo(document("create-event",
-            links(
-                linkWithRel("self").description("link to self")
-            ),
-            requestHeaders(
-                headerWithName(HttpHeaders.ACCEPT).description("accept header"),
-                headerWithName(HttpHeaders.CONTENT_TYPE).description("header content type")
-            ),
-            requestFields(
-                fieldWithPath("name").description("Name"),
-                fieldWithPath("description").description("desc")
-            ),
-            responseFields(
-                fieldWithPath("respName").description("resp name")
-            )
+        .andDo(document("create-market",
+              links(
+                  halLinks(),
+                  linkWithRel("self").description("link to self")
+              ),
+              requestHeaders(
+                  headerWithName(HttpHeaders.ACCEPT).description("accept header"),
+                  headerWithName(HttpHeaders.CONTENT_TYPE).description("header content type")
+              ),
+              relaxedRequestFields(
+                  fieldWithPath("marketName").description("Name"),
+                  fieldWithPath("location").description("desc")
+              ),
+              responseHeaders(
+                  headerWithName(HttpHeaders.LOCATION).description("resp header location")
+              )
+//            ,
+//              responseFields(
+//                  fieldWithPath("respName").description("resp name"),
+//                  subsectionWithPath("respSub").description("sub section")
+//              )
             )
         );
   }
 
   @Test
   public void createMarketEntity() throws Exception{
-    LinkedHashSet<Employee> employees = new LinkedHashSet();
-    Employee employee = new Employee();
-    employee.setName("emp1");
-    employee.setAge(20);
-    employees.add(employee);
-
-    LinkedHashSet<Item> items = new LinkedHashSet();
-    Item item = new Item();
-    item.setCategory("grocery");
-    item.setName("corn");
-    item.setQuantity(50);
-    items.add(item);
-
-    Market market = Market.builder()
-        .marketName("marketName")
-        .location("norvrant")
-        .employees(employees)
-        .items(items)
-        .build();
+    String body = FileUtils.readFileToString(new File("src/test/resources/market_1.json"));
 
     mockMvc.perform(post("/market/create/entity")
         .contentType(MediaType.APPLICATION_JSON)//요청 타입은 JSON이다
         .accept(MediaTypes.HAL_JSON)//HAL JSON을 돌려달라
-        .content(objectMapper.writeValueAsString(market))//objectMapper가 json string으로 바꿔줌
+        .content(body)
     )
         .andDo(print())
         .andExpect(status().isCreated())
@@ -113,10 +100,49 @@ public class MarketTest {
         .andExpect(jsonPath("_links.update-market").exists())
         //적용한 스니펫 : links,
         .andDo(document("create-market",
-              links(
+              links(//링크정
                   linkWithRel("self").description("link to self"),
                   linkWithRel("markets").description("link to show all markets"),
-                  linkWithRel("update-market").description("link to update a market")
+                  linkWithRel("update-market").description("link to update a market"),
+                  linkWithRel("profile").description("link to update a market")
+              ),
+              requestHeaders(//요청 헤더
+                  headerWithName(HttpHeaders.ACCEPT).description("accept type"),
+                  headerWithName(HttpHeaders.CONTENT_TYPE).description("content type")
+              ),
+              requestFields(//요청 필
+                  fieldWithPath("marketName").description("name of new market"),
+                  fieldWithPath("location").description("location of market"),
+                  fieldWithPath("employees.[].name").description("name of employee of market"),
+                  fieldWithPath("employees.[].age").description("name of employee of market"),
+                  fieldWithPath("items.[].name").description("name of item of market"),
+                  fieldWithPath("items.[].category").description("category of item of market"),
+                  fieldWithPath("items.[].quantity").description("quantity of item of market")
+              ),
+              responseHeaders(
+                  headerWithName(HttpHeaders.LOCATION).description("accept type"),
+                  headerWithName(HttpHeaders.CONTENT_TYPE).description("HAL JSON type")
+              ),
+              //responseFields(
+              relaxedResponseFields(//relaxed : 문서의 일부분만 확인해도 되게끔 설정해주는 prefix
+                  //fieldWithPath : 응답의 필드를 기술하기 위한 메소드
+                  //subsectioniiWithPath : 하위섹션에 대한 정보를 기술하기 위한 메소드
+                  subsectionWithPath("market").description("info of market"),
+                  fieldWithPath("market.id").description("id of market"),
+                  fieldWithPath("market.marketName").description("name of new market"),
+                  fieldWithPath("market.location").description("location of market"),
+                  subsectionWithPath("market.employees[]").description("employees of market"),
+                  fieldWithPath("market.employees[].id").description("id of employee of market"),
+                  fieldWithPath("market.employees.[].name").description("name of employee of market"),
+                  fieldWithPath("market.employees.[].age").description("name of employee of market"),
+                  fieldWithPath("market.employees.[].market").description("market of employee of market"),
+                  subsectionWithPath("market.items").description("items of market"),
+                  fieldWithPath("market.items.[].id").description("id of item of market"),
+                  fieldWithPath("market.items.[].name").description("name of item of market"),
+                  fieldWithPath("market.items.[].category").description("category of item of market"),
+                  fieldWithPath("market.items.[].quantity").description("quantity of item of market"),
+                  fieldWithPath("market.items.[].market").description("market of item of market"),
+                  fieldWithPath("_links.profile").description("profile")
               )
             )
         )

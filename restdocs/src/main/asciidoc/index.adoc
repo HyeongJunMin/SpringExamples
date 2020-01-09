@@ -1,4 +1,4 @@
-= RESTful Notes API Guide
+= Market REST API
 민형준;
 :doctype: book
 :icons: font
@@ -6,20 +6,9 @@
 :toc: left
 :toclevels: 4
 
-== curl req
+=== 개별 문서조각 가져오는 방법
 include::{snippets}/create-market/curl-request.adoc[]
 
-== http req
-include::{snippets}/create-market/http-request.adoc[]
-
-== http resp
-include::{snippets}/create-market/http-response.adoc[]
-
-== req body
-include::{snippets}/create-market/request-body.adoc[]
-
-== resp body
-include::{snippets}/create-market/response-body.adoc[]
-
-== links
-include::{snippets}/create-market/links.adoc[]
+== create-market
+=== 여러 개의 문서조각 가져오는 방법
+operation::create-market[snippets='curl-request,http-request,http-response,httpie-request,links,request-body,request-fields,request-headers,response-body,response-headers,response-fields']
