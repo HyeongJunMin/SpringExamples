@@ -98,7 +98,7 @@ public class MarketTest {
         .andExpect(jsonPath("_links.self").exists())
         .andExpect(jsonPath("_links.markets").exists())
         .andExpect(jsonPath("_links.update-market").exists())
-        //적용한 스니펫 : links,
+        //적용한 스니펫 : links
         .andDo(document("create-market",
               links(//링크정
                   linkWithRel("self").description("link to self"),
