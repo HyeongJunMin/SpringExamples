@@ -21,6 +21,7 @@ public class RestDocsConfiguration {
             .withRequestDefaults(prettyPrint())
             .withResponseDefaults(prettyPrint());
 
+    //아래 코드를 위 람다식으로 변환(idea 기능)
 //    return new RestDocsMockMvcConfigurationCustomizer() {
 //      @Override
 //      public void customize(MockMvcRestDocumentationConfigurer configurer) {
