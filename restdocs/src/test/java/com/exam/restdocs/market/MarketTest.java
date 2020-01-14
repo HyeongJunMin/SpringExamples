@@ -100,7 +100,7 @@ public class MarketTest {
         .andExpect(jsonPath("_links.update-market").exists())
         //적용한 스니펫 : links
         .andDo(document("create-market",
-              links(//링크정
+              links(//링크정보
                   linkWithRel("self").description("link to self"),
                   linkWithRel("markets").description("link to show all markets"),
                   linkWithRel("update-market").description("link to update a market"),
@@ -110,7 +110,7 @@ public class MarketTest {
                   headerWithName(HttpHeaders.ACCEPT).description("accept type"),
                   headerWithName(HttpHeaders.CONTENT_TYPE).description("content type")
               ),
-              requestFields(//요청 필
+              requestFields(//요청 필드
                   fieldWithPath("marketName").description("name of new market"),
                   fieldWithPath("location").description("location of market"),
                   fieldWithPath("employees.[].name").description("name of employee of market"),
