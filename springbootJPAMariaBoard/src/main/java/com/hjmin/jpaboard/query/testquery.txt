@@ -1,0 +1,7 @@
+use jpaboard;
+show tables;
+select * from market;
+select * from market_employee a, market_item b where a.market_id = b.market_id;
+select distinct a.name, a.market_employee_id from market_employee a inner join market_item b on a.market_id = b.market_id;
+select * from market_employee;
+select * from market_item;

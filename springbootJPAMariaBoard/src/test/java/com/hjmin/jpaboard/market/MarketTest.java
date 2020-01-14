@@ -45,7 +45,7 @@ public class MarketTest {
         .build();
   }
 
-  @Ignore
+  //@Ignore
   @Test
   @Rollback(false)
   public void a_createMarket() throws Exception{
