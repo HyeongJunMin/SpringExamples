@@ -111,7 +111,7 @@ public class MarketTest {
                   headerWithName(HttpHeaders.CONTENT_TYPE).description("content type")
               ),
               requestFields(//요청 필드
-                  fieldWithPath("marketName").description("name of new market"),
+                  fieldWithPath("marketName").description("name of new market").optional(),
                   fieldWithPath("location").description("location of market"),
                   fieldWithPath("employees.[].name").description("name of employee of market"),
                   fieldWithPath("employees.[].age").description("name of employee of market"),
